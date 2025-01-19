@@ -1,0 +1,156 @@
+// core
+.p-paginator-default {
+    display: flex;
+}
+
+.p-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.p-paginator-left-content {
+    margin-right: auto;
+}
+
+.p-paginator-right-content {
+    margin-left: auto;
+}
+
+.p-paginator-page,
+.p-paginator-next,
+.p-paginator-last,
+.p-paginator-first,
+.p-paginator-prev,
+.p-paginator-current {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.p-paginator-element:focus {
+    z-index: 1;
+    position: relative;
+}
+
+// theme
+.p-paginator {
+    background: $paginatorBg;
+    color: $paginatorTextColor;
+    border: $paginatorBorder;
+    border-width: $paginatorBorderWidth;
+    // padding: $paginatorPadding;
+    // border-radius: $borderRadius;
+
+    .p-paginator-first,
+    .p-paginator-prev,
+    .p-paginator-next,
+    .p-paginator-last {
+        background-color: $paginatorElementBg;
+        // border: $paginatorElementBorder;
+        color: $paginatorElementIconColor;
+        // min-width: $paginatorElementWidth;
+        min-width: 33px;
+        // height: $paginatorElementHeight;
+        height: 36px;
+        margin: $paginatorElementMargin;
+        transition: $listItemTransition;
+        // border-radius: $paginatorElementBorderRadius;
+
+        &:not(.p-disabled):not(.p-highlight):hover {
+            background: $paginatorElementHoverBg;
+            // border-color: $paginatorElementHoverBorderColor;
+            color: $paginatorElementIconHoverColor;
+        }
+    }
+
+    .p-paginator-first {
+        border-top-left-radius: $paginatorElementBorderRadius;
+        border-bottom-left-radius: $paginatorElementBorderRadius;
+    }
+    
+    .p-paginator-last {
+        border-top-right-radius: $paginatorElementBorderRadius;
+        border-bottom-right-radius: $paginatorElementBorderRadius;
+    }
+
+    .p-dropdown {
+        margin-left: $inlineSpacing;
+        margin-right: $inlineSpacing;
+        height: $paginatorElementHeight;
+
+        .p-dropdown-label {
+            padding-right: 0;
+        }
+    }
+
+    .p-paginator-page-input {
+        margin-left: $inlineSpacing;
+        margin-right: $inlineSpacing;
+
+        .p-inputtext {
+            max-width: $paginatorElementWidth;
+        }
+    }
+
+    .p-paginator-current {
+        background-color: $paginatorElementBg;
+        border: $paginatorElementBorder;
+        color: $paginatorElementIconColor;
+        // min-width: $paginatorElementWidth;
+        min-width: 33px;
+        // height: $paginatorElementHeight;
+        height: 36px;
+        margin: $paginatorElementMargin;
+        padding: 0 $inlineSpacing;
+    }
+
+    .p-paginator-pages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        .p-paginator-page {
+            font-size: 13px;
+            background-color: $paginatorElementBg;
+            border: $paginatorElementBorder;
+            color: $paginatorElementIconColor;
+            // min-width: $paginatorElementWidth;
+            min-width: 33px;
+            // height: $paginatorElementHeight;
+            height: 36px;
+
+            margin: $paginatorElementMargin;
+            transition: $listItemTransition;
+            // border-radius: $paginatorElementBorderRadius;
+            border-radius: 4px;
+
+            &.p-highlight {
+                // background: $highlightBg;
+                background-color: var(--primary-color);
+                border-color: $highlightBg;
+                // color: $highlightTextColor;
+                color: white;
+                font-weight: 700;
+            }
+
+            &:not(.p-highlight):hover {
+                background: $paginatorElementHoverBg;
+                border-color: $paginatorElementHoverBorderColor;
+                color: $paginatorElementIconHoverColor;
+            }
+
+            @media (min-width: 640px) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

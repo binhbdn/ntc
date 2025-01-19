@@ -1,0 +1,15 @@
+/* Prime Icons */
+@import "primeicons/primeicons.css";
+
+/* tailwind */
+:root {
+  --primary-rgb: 255 49 48;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
