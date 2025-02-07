@@ -12,7 +12,7 @@ import PrimeVue from "primevue/config";
 /* Service */
 // import ConfirmationService from "primevue/confirmationservice";
 // import DialogService from "primevue/dialogservice";
-// import ToastService from "primevue/toastservice";
+import ToastService from "primevue/toastservice";
 
 /* Form */
 // import AutoComplete from "primevue/autocomplete";
@@ -114,7 +114,7 @@ import Button from "primevue/button";
 /* Messages */
 // import Message from "primevue/message";
 // import InlineMessage from "primevue/inlinemessage";
-// import Toast from "primevue/toast"; // required "primevue/toastservice" or useToast function from "primevue/usetoast"
+import Toast from "primevue/toast"; // required "primevue/toastservice" or useToast function from "primevue/usetoast"
 
 /* Media */
 // import Carousel from "primevue/carousel";
@@ -148,7 +148,7 @@ export const usePrimeVue = (app) => {
   /* Service */
   // app.use(ConfirmationService);
   // app.use(DialogService);
-  // app.use(ToastService);
+  app.use(ToastService);
 
   /* Directives */
   // app.directive("tooltip", Tooltip);
@@ -205,7 +205,7 @@ export const usePrimeVue = (app) => {
 
   /* Messages */
   // app.component("Message", Message);
-  // app.component("Toast", Toast);
+  app.component("Toast", Toast);
 
   /* Media */
   // app.component("Carousel", Carousel);

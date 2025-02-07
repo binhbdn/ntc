@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.wrangler
 
 # Editor directories and files
 .vscode/*
@@ -25,9 +26,14 @@ dist-ssr
 www
 pnpm-lock.yaml
 package-lock.json
+
+# Environment files
 .env
+.env.production
+.dev.vars
+
+# Other
 .DS_Store
-.env
 .cursorrules
 
 # Ignore CSS source maps

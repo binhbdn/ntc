@@ -12,10 +12,14 @@
     "lint": "eslint . --ext .vue,.js,.cjs --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .vue,.js,.cjs --fix --ignore-path .gitignore",
     "prettier": "prettier --write \"src/**/*.{js,vue,css,scss,html}\"",
-    "format": "npm run lint:fix && npm run prettier"
+    "format": "npm run lint:fix && npm run prettier",
+    "api:dev": "wrangler dev",
+    "api:deploy": "wrangler deploy"
   },
   "dependencies": {
     "@vueuse/core": "^11.0.1",
+    "hono": "^4.6.17",
+    "jsonwebtoken": "^9.0.2",
     "pinia": "^2.1.7",
     "primeicons": "^7.0.0",
     "primevue": "3.52.0",
@@ -34,6 +38,7 @@
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
     "tailwindcss": "^3.4.6",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "wrangler": "^3.103.2"
   }
 }

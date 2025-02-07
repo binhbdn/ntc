@@ -1,0 +1,7 @@
+name = "ntc-api"
+main = "./backend/index.js"
+compatibility_date = "2025-01-19"
+
+kv_namespaces = [
+  { binding = "KV", id = "a833638400e84d0b832ee8affaa109e5" }
+]
