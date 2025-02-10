@@ -5,7 +5,7 @@ import { setBanners, getBanners } from "./controllers/banners";
 
 const app = new Hono();
 
-app.use("/api/*", cors({ origin: ["https://ntc-me.pages.dev/", "http://localhost:5175"] }));
+app.use("/api/*", cors({ origin: ["https://ntc-me.pages.dev", "http://localhost:5175"] }));
 
 // auth
 app.post("/api/login", login);
